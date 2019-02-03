@@ -1,5 +1,6 @@
 package com.apress.domain;
 
+import java.util.Map;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -25,6 +26,11 @@ public class Poll {
     @JoinColumn(name="POLL_ID")
     @OrderBy
     private Set<Option> options;
+
+	public Map<String, ?> getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
     // Getters and Setters omitted for brevity
 }
