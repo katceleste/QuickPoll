@@ -19,5 +19,12 @@ public class Vote {
     @JoinColumn(name="OPTION_ID")
     private Option option;
 
-    // Getters and Setters omitted for brevity
+    public Long getId() {
+        return id;
+    }
+
+    public Option getOption() {
+        return option;
+    }
+
 }

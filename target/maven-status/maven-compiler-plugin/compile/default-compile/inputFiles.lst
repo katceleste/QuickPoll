@@ -1,8 +1,14 @@
 /Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/domain/Vote.java
 /Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/Application.java
-/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/repository/OptionRepository.java
 /Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/repository/VoteRepository.java
-/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/repository/PollRepository.java
 /Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/controller/PollController.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/controller/ComputeResultController.java
 /Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/domain/Option.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/dto/VoteResult.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/repository/OptionRepository.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/controller/VoteController.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/repository/PollRepository.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/dto/OptionCount.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/repository/UserRepository.java
 /Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/domain/Poll.java
+/Users/katherineguzman/IdeaProjects/QuickPoll/src/main/java/com/apress/domain/User.java

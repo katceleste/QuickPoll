@@ -4,16 +4,14 @@ import com.apress.domain.Poll;
 import com.apress.repository.PollRepository;
 
 import java.net.URI;
-
+import java.util.Optional;
+import java.lang.Long;
 import javax.inject.Inject;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 
@@ -21,10 +19,11 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 // to inject an instance of PollRepository into our controller.
 @RestController
 public class PollController {
+
 		@Inject
 	    private PollRepository pollRepository;
 
-    //A GET request on the /polls endpoint provides a collection of all of the polls
+		//A GET request on the /polls endpoint provides a collection of all of the polls
     // available in the QuickPolls application.
 
     //The @RequestMapping annotation declares the URI and the allowed HTTP method.
@@ -60,6 +59,24 @@ public class PollController {
 	    return new ResponseEntity<>(null, responseHeaders, HttpStatus.CREATED);
     }
 
-   
+	@RequestMapping(value="/polls/{pollId}", method=RequestMethod.GET)
+	public ResponseEntity<?> getPoll(@PathVariable Long pollId) {
+		Optional<Poll> p = pollRepository.findById(pollId);
+		return new ResponseEntity<> (p, HttpStatus.OK);
+	}
 
+	// Update a poll???? How??
+	@RequestMapping(value="/polls/{pollId}", method=RequestMethod.PUT)
+	public ResponseEntity<?> updatePoll(@RequestBody Poll poll, @PathVariable Long pollId) {
+		// Save the entity
+		Poll p = pollRepository.save(poll);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
+	// Delete a poll
+	@RequestMapping(value="/polls/{pollId}", method=RequestMethod.DELETE)
+	public ResponseEntity<?> deletePoll(@PathVariable Long pollId) {
+		pollRepository.deleteById(pollId);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
 }
