@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="QuickPoll" target="1.8" />
+      <module name="QuickPoll" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

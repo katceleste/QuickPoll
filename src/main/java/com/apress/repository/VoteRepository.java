@@ -8,8 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface VoteRepository extends CrudRepository <Vote, Long> {
 
     // At runtime, Spring Data JPA replaces the ?1 placeholder with the passed-in pollId parameter value.
-    @Query(value="select v.* from Option o, Vote v where o.POLL_ID = ?1 and " +
-            "v.OPTION_ID = o.OPTION_ID", nativeQuery = true)
+    @Query(value="select v.* from Option o, Vote v where o.POLL_ID = ?1 and v.OPTION_ID = o.OPTION_ID", nativeQuery = true)
     public Iterable<Vote> findByPoll(Long pollId);
 
 }

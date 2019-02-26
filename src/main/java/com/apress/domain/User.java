@@ -44,6 +44,8 @@ public class User {
     @Type(type = "yes_no")
     @NotEmpty
     private boolean admin;
+
+
 // Getters and Setters ommited for brevity
 
 }

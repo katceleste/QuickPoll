@@ -39,12 +39,14 @@ public class Poll {
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getQuestion() {
         return question;
     }
     public void setQuestion(String question) {
         this.question = question;
     }
+
     public Set<Option> getOptions() {
         return options;
     }

@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.util.Optional;
 
 @Entity
 public class Vote {
@@ -22,9 +23,17 @@ public class Vote {
     public Long getId() {
         return id;
     }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Option getOption() {
         return option;
     }
+    public void setOption(Option option)
+    {
+        this.option = option;
+    }
+
 
 }
